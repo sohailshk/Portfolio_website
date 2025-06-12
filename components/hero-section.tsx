@@ -70,7 +70,7 @@ export default function HeroSection() {
           View My Work
         </motion.a>
         <motion.a
-          href="https://drive.google.com/file/d/1BxaOo_9YtkUi_wcgg-6xiQTHwwBdQ0XN/view?usp=sharing"
+          href="https://drive.google.com/file/d/1giRwtBOzeTh-nPYZ0A7_hbyGx-3IFNaV/view?usp=sharing"
           target="_blank"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
