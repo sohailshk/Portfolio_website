@@ -18,8 +18,7 @@ export default function Footer() {
               <span className="font-medium text-white text-lg">Portfolio</span>
             </div>
             <p className="text-neutral-300 mb-6 max-w-md">
-              Full Stack Developer passionate about creating amazing digital experiences with modern technologies and
-              clean, efficient code.
+              Machine Learning and Ai Engineer with Full Stack Expertise passionate about creating amazing user experiences
             </p>
             <div className="flex gap-4">
               <motion.a
@@ -87,19 +86,19 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:john@example.com"
+                  href="mailto:sohailsaif504@gmail.com"
                   className="text-neutral-300 hover:text-white transition-colors duration-200"
                 >
-                  john@example.com
+                  sohailsaif504@gmail.com
                 </a>
               </li>
               <li>
                 <a href="tel:+15551234567" className="text-neutral-300 hover:text-white transition-colors duration-200">
-                  +1 (555) 123-4567
+                  +91 ########
                 </a>
               </li>
               <li>
-                <span className="text-neutral-300">San Francisco, CA</span>
+                <span className="text-neutral-300">Mumbai, India</span>
               </li>
               <li>
                 <a href="#contact" className="text-neutral-300 hover:text-white transition-colors duration-200">

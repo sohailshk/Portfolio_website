@@ -39,7 +39,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.0 }}
             className="inline-block"
           >
             <Highlight className="text-black dark:text-white">{roles[currentRole]}</Highlight>
@@ -53,7 +53,7 @@ export default function HeroSection() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-neutral-600 dark:text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto mt-8 text-center px-4"
       >
-        I build modern AI & Web applications with cutting-edge technologies and clean, efficient code.
+        I build modern AI & Web applications with cutting-edge technologies and write clean, efficient code.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export default function HeroSection() {
           View My Work
         </motion.a>
         <motion.a
-          href="/resume.pdf"
+          href="https://drive.google.com/file/d/1BxaOo_9YtkUi_wcgg-6xiQTHwwBdQ0XN/view?usp=sharing"
           target="_blank"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}

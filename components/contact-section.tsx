@@ -63,19 +63,13 @@ export default function ContactSection() {
                 {
                   icon: IconMail,
                   label: "Email",
-                  value: "john@example.com",
+                  value: "sohailsaif504@gmail.com",
                   color: "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400",
-                },
-                {
-                  icon: IconPhone,
-                  label: "Phone",
-                  value: "+1 (555) 123-4567",
-                  color: "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400",
                 },
                 {
                   icon: IconMapPin,
                   label: "Location",
-                  value: "San Francisco, CA",
+                  value: "Mumbai, Qatar",
                   color: "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400",
                 },
               ].map((item, index) => (
@@ -107,9 +101,9 @@ export default function ContactSection() {
               <h4 className="text-lg font-semibold text-neutral-800 dark:text-white mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {[
-                  { icon: IconBrandGithub, href: "#", color: "hover:text-gray-600" },
-                  { icon: IconBrandLinkedin, href: "#", color: "hover:text-blue-600" },
-                  { icon: IconBrandTwitter, href: "#", color: "hover:text-blue-400" },
+                  { icon: IconBrandGithub, href: "https://github.com/sohailshk", color: "hover:text-gray-600" },
+                  { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/mohdsohailshk/", color: "hover:text-blue-600" },
+                  { icon: IconBrandTwitter, href: "https://x.com/MohammadSo76779", color: "hover:text-blue-400" },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
@@ -148,7 +142,7 @@ export default function ContactSection() {
                 viewport={{ once: true }}
                 className="text-xl font-bold text-neutral-800 dark:text-neutral-200"
               >
-                Send me a message at 9819555210
+                Send me a message
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

@@ -3,41 +3,42 @@ import { motion } from "motion/react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Clari News",
     description:
-      "A full-stack e-commerce solution built with Next.js, Stripe, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
+      "Architected an ML-powered B2B service for real-time multi-topic news classification, deployed Hugging Face Inference API and serving real users. Engineered end-to-end pipeline—robust preprocessing (tokenization, 10k-vocab embeddings, padded sequences), balanced experiments (78%+ baseline accuracy vs. imbalance strategies) at Scale. ",
+    image: "/",
+    technologies: ["Python", "MLops", "TensorFlow", "Hugging Face","REST API'S"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/sohailshk/NEWs_Filtering_InProdution/",
   },
   {
-    title: "Task Management App",
+    title: "Suit Sense AI",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "SuitSense AI is an intelligent assistant designed to revolutionize how real estate agents and investors analyze condominium data in Miami. Using the power of Natural Language Processing (NLP), SuitSense AI allows non-technical users to perform deep data queries, generate insights, and visualize market trends without writing a single line of code.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+    technologies: ["Langchain", "Langgraph", "RAG", "Vector Databases(FAISS)","OPENAI"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/sohailshk/SuitSenseAI/",
   },
   {
-    title: "Weather Dashboard",
+    title: "CarePulse",
     description:
-      "A responsive weather dashboard that displays current weather conditions and forecasts for multiple cities with beautiful data visualizations.",
+      "CarePulse is an AI-powered healthcare platform designed to provide a seamless and intelligent healthcare experience. It integrates AI diagnosis, real-time health monitoring, emergency response systems, and community engagement tools to enhance patient care and safety.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Chart.js", "Weather API", "Tailwind"],
+    technologies: ["React (Vite)", "Firebase", "Appwrite", "Google Fit API, Gemini AI", "AI Diagnosis & Image-Based Accident Detection","Next.js for appointment system"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/sohailshk/WeHack-Healthcare",
   },
   {
-    title: "Social Media Analytics",
+    title: "Lunar Lander AI",
     description:
-      "An analytics dashboard for social media metrics with data visualization, reporting features, and automated insights generation.",
+      " implemented a Deep Q-Network (DQN) agent to solve OpenAI Gym's Lunar Lander environment. The agent learns to safely land a lunar module on a landing pad using reinforcement learning techniques.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Vue.js", "Python", "FastAPI", "D3.js"],
+    technologies: ["OpenAI Gym", "TensorFlow", "Python", "Reinforcement Learning"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/sohailshk/Lunar-Lander-AI-Safe-Descent",
   },
+  
 ]
 
 export default function ProjectsSection() {

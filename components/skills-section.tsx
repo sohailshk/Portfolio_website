@@ -9,7 +9,7 @@ const skills = [
     items: [
       { name: "React", level: 95, color: "from-blue-500 to-cyan-500" },
       { name: "Next.js", level: 90, color: "from-gray-700 to-gray-900" },
-      { name: "TypeScript", level: 88, color: "from-blue-600 to-blue-800" },
+      { name: "ShadCN", level: 88, color: "from-blue-600 to-blue-800" },
       { name: "Tailwind CSS", level: 92, color: "from-teal-500 to-green-500" },
     ],
   },
@@ -17,20 +17,22 @@ const skills = [
     category: "Backend",
     icon: "⚙️",
     items: [
-      { name: "Node.js", level: 85, color: "from-green-500 to-green-700" },
+      { name: "Flask", level: 85, color: "from-green-500 to-green-700" },
       { name: "Python", level: 80, color: "from-yellow-500 to-orange-500" },
       { name: "PostgreSQL", level: 82, color: "from-blue-500 to-indigo-600" },
-      { name: "MongoDB", level: 78, color: "from-green-600 to-green-800" },
+      { name: "Django", level: 78, color: "from-green-600 to-green-800" },
+      { name: "TensorFlow", level: 78, color: "from-green-600 to-green-800" },
     ],
   },
   {
     category: "Tools & Others",
     icon: "🛠️",
     items: [
-      { name: "Git", level: 90, color: "from-orange-500 to-red-500" },
+      { name: "Github", level: 90, color: "from-orange-500 to-red-500" },
       { name: "Docker", level: 75, color: "from-blue-400 to-blue-600" },
-      { name: "AWS", level: 70, color: "from-yellow-400 to-orange-500" },
-      { name: "Figma", level: 85, color: "from-purple-500 to-pink-500" },
+      { name: "GCP", level: 70, color: "from-yellow-400 to-orange-500" },
+      { name: "Jenkins", level: 85, color: "from-purple-500 to-pink-500" },
+      { name: "Postman", level: 85, color: "from-purple-500 to-pink-500" },
     ],
   },
 ]
@@ -134,10 +136,8 @@ export default function SkillsSection() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "50+", label: "Projects Completed", color: "text-blue-600 dark:text-blue-400" },
-              { number: "5+", label: "Years Experience", color: "text-purple-600 dark:text-purple-400" },
-              { number: "30+", label: "Happy Clients", color: "text-green-600 dark:text-green-400" },
-              { number: "24/7", label: "Support", color: "text-orange-600 dark:text-orange-400" },
+              { number: "20+", label: "Projects Completed", color: "text-blue-600 dark:text-blue-400" },
+              { number: "1", label: "Years Experience", color: "text-purple-600 dark:text-purple-400" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

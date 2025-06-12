@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "motion/react"
 import { CardSpotlight } from "@/components/ui/card-spotlight"
+import Image from "next/image"
 
 export default function AboutSection() {
   return (
@@ -30,17 +31,22 @@ export default function AboutSection() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-6 flex items-center justify-center"
+                  className="w-32 h-32 mb-6 rounded-full overflow-hidden"
                 >
-                  <span className="text-white text-4xl font-bold">JD</span>
+                  <Image
+                    src="/sohail_ghibli.png"
+                    alt="Mohammad Sohail"
+                    width={128} height={128}
+                    className="object-cover"
+                  />
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-2">John Developer</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Mohammad Sohail</h3>
                 <p className="text-neutral-200 text-center mb-4">
                   Machine Learning and Ai Engineer with Full Stack Expertise passionate about creating amazing user experiences
                 </p>
                 <div className="flex gap-4">
                   <motion.a
-                    href="#"
+                    href="https://x.com/MohammadSo76779"
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     className="text-blue-400 hover:text-blue-300 transition-colors"
                   >
@@ -49,7 +55,7 @@ export default function AboutSection() {
                     </svg>
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.linkedin.com/in/mohdsohailshk/"
                     whileHover={{ scale: 1.2, rotate: -10 }}
                     className="text-blue-400 hover:text-blue-300 transition-colors"
                   >
@@ -58,7 +64,7 @@ export default function AboutSection() {
                     </svg>
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://github.com/sohailshk"
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     className="text-blue-400 hover:text-blue-300 transition-colors"
                   >
@@ -106,8 +112,7 @@ Let’s connect if you’re into tech that matters.
               className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed"
             >
               When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or
-              sharing knowledge with the developer community and Reading Books. I believe in writing clean, maintainable code and creating
-              user experiences that delight.
+              sharing knowledge with the developer community, Lifting Heavy Weights and Reading Books.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -118,11 +123,11 @@ Let’s connect if you’re into tech that matters.
             >
               <motion.div whileHover={{ scale: 1.05 }} className="p-4 bg-neutral-50 dark:bg-neutral-900 rounded-lg">
                 <h3 className="font-semibold text-neutral-800 dark:text-white mb-2">Frontend</h3>
-                <p className="text-neutral-600 dark:text-neutral-300">React, Next.js, TypeScript</p>
+                <p className="text-neutral-600 dark:text-neutral-300">React, Next.js, HTML5, CSS3, TailwindCSS, ShadCN</p>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="p-4 bg-neutral-50 dark:bg-neutral-900 rounded-lg">
                 <h3 className="font-semibold text-neutral-800 dark:text-white mb-2">Backend</h3>
-                <p className="text-neutral-600 dark:text-neutral-300">Node.js, Python, PostgreSQL</p>
+                <p className="text-neutral-600 dark:text-neutral-300">Python,C++(Competetive Programming), PostgreSQL,Langchain,Langgraph,TensorFlow,Pandas</p>
               </motion.div>
             </motion.div>
           </motion.div>
