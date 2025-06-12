@@ -69,7 +69,7 @@ export default function ContactSection() {
                 {
                   icon: IconMapPin,
                   label: "Location",
-                  value: "Mumbai, Qatar",
+                  value: "Mumbai, India",
                   color: "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400",
                 },
               ].map((item, index) => (
