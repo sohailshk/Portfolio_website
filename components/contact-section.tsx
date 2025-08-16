@@ -1,24 +1,24 @@
 "use client"
-import type React from "react"
+
 import { motion } from "motion/react"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandTwitter,
   IconMail,
-  IconPhone,
   IconMapPin,
 } from "@tabler/icons-react"
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 export default function ContactSection() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log("Form submitted")
-  }
-
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
   return (
     <div className="w-full py-20 bg-neutral-50 dark:bg-neutral-900 relative overflow-hidden">
       {/* Background Animation */}
@@ -123,7 +123,7 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Cal.com Embed */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -131,104 +131,15 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <motion.div
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="shadow-2xl mx-auto w-full max-w-md rounded-2xl bg-white p-8 dark:bg-black border border-neutral-200 dark:border-neutral-800 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90"
-            >
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-xl font-bold text-neutral-800 dark:text-neutral-200"
-              >
-                Send me a message
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300"
-              >
-                Fill out the form below and I'll get back to you as soon as possible.
-              </motion.p>
-
-              <form className="my-8" onSubmit={handleSubmit}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  viewport={{ once: true }}
-                  className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2"
-                >
-                  <LabelInputContainer>
-                    <Label htmlFor="firstname">First name</Label>
-                    <Input id="firstname" placeholder="John" type="text" />
-                  </LabelInputContainer>
-                  <LabelInputContainer>
-                    <Label htmlFor="lastname">Last name</Label>
-                    <Input id="lastname" placeholder="Doe" type="text" />
-                  </LabelInputContainer>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <LabelInputContainer className="mb-4">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" placeholder="john@example.com" type="email" />
-                  </LabelInputContainer>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
-                  <LabelInputContainer className="mb-4">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="Project Inquiry" type="text" />
-                  </LabelInputContainer>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <LabelInputContainer className="mb-8">
-                    <Label htmlFor="message">Message</Label>
-                    <motion.textarea
-                      whileFocus={{ scale: 1.02 }}
-                      id="message"
-                      placeholder="Tell me about your project..."
-                      rows={4}
-                      className="shadow-input dark:placeholder-text-neutral-600 flex w-full rounded-md border-none bg-gray-50 px-3 py-2 text-sm text-black transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:ring-[2px] focus-visible:ring-neutral-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-800 dark:text-white dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-neutral-600"
-                    />
-                  </LabelInputContainer>
-                </motion.div>
-
-                <motion.button
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
-                  type="submit"
-                >
-                  Send Message &rarr;
-                  <BottomGradient />
-                </motion.button>
-              </form>
-            </motion.div>
+            <div className="shadow-2xl mx-auto w-full max-w-md rounded-2xl bg-white p-8 dark:bg-black border border-neutral-200 dark:border-neutral-800 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90">
+              <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Book a Meeting</h3>
+              <Cal
+                namespace="30min"
+                calLink="mohammad-sohail-shaikh/30min"
+                style={{ width: "100%", height: "600px", overflow: "scroll" }}
+                config={{ layout: "month_view" }}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
